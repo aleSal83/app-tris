@@ -1,0 +1,71 @@
+$tablet-width: 1200px;
+$phone-width: 570px;
+
+.container {
+  position: relative;
+}
+
+.overlap {
+  position: absolute;
+}
+
+.ripple {
+  z-index: 100;
+}
+
+.board {
+  z-index: 1;
+}
+
+.player-move {
+  color: rgb(5, 45, 121)
+}
+
+p {
+  font-size: 20px;
+}
+
+main {
+  display: grid;
+
+  @media only screen and (min-width: $tablet-width) {
+    grid-template-columns: 20vmin 20vmin 20vmin;
+  }
+
+  @media only screen and (max-width: $tablet-width) and (min-width: $phone-width) {
+    grid-template-columns: 16vmin 16vmin 16vmin;
+  }
+
+  @media only screen and (max-width: $phone-width) {
+    grid-template-columns: 13vmax 13vmax 13vmax;
+  }
+
+  grid-gap: 0px;
+}
+
+app-ripple-overlay {
+  border: 1px solid rgba(60, 0, 255, 0.63);
+
+  @media only screen and (min-width: $tablet-width) {
+    height: 20vmin;
+  }
+
+  
+  
+}
+
+app-square {
+  border: 1px solid rgb(41, 31, 77);
+
+  @media only screen and (min-width: $tablet-width) {
+    height: 20vmin;
+  }
+
+  @media only screen and (max-width: $tablet-width) and (min-width: $phone-width) {
+    height: 16vmin;
+  }
+
+  @media only screen and (max-width: $phone-width) {
+    height: 13vmax;
+  }
+}

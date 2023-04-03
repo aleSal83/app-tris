@@ -1,0 +1,67 @@
+.game-view {
+  @media only screen and (min-width: 1200px) {
+    display: flex;
+  }
+
+  @media only screen and (orientation: landscape) {
+    display: flex;
+  }
+}
+
+app-board {
+  @media only screen and (min-width: 1200px) {
+    margin: 10px;
+  }
+}
+
+.new-game-form {
+  color: #b1ceff;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  p {
+    color: #b1ceff;
+
+    @media only screen and (min-width: 1200px) {
+      font-size: 5vmin;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      font-size: 3vmax;
+    }
+  }
+}
+
+.new-game-buttons {
+  display: flex;
+
+  @media only screen and (max-width: 475px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.difficulty-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 20px;
+}
+
+mat-radio-button {
+  display: flex;
+  justify-content: center;
+  margin: 3vmin 0;
+
+  @media only screen and (max-width: 1200px) {
+    margin: 15px 0;
+    height: 10px;
+    width: 10px;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
