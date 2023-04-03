@@ -1,0 +1,33 @@
+<div class="text" [@inOutAnimation]>
+  <p
+    class="player-move"
+    *ngIf="squares && !winner && !aiPlayer?.enabled"
+  >
+    Current Player: {{ player }}
+  </p>
+  <h1 class="game-over" *ngIf="winner && winner != 'tie'">
+    Player {{ winner }} won!
+  </h1>
+</div>
+
+<!-- Griglia -->
+<div class="container">
+  <div class="overlap ripple">
+    <main>
+      <app-ripple-overlay
+        class="ripple"
+        *ngFor="let val of squares2; let i = index"
+        (click)="makeMove(i)"
+      ></app-ripple-overlay>
+    </main>
+  </div>
+  <div class="overlap board">
+    <main>
+      <app-square
+        class="square"
+        *ngFor="let val of squares; let i = index"
+        [value]="val"
+      ></app-square>
+    </main>
+  </div>
+</div>

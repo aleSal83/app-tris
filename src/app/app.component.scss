@@ -1,0 +1,8 @@
+nb-layout-column {
+  padding: 0 0 0;
+
+  @media only screen and (min-width: 1200px) {
+    justify-content: flex-start;
+  }
+}
+
